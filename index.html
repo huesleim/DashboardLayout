@@ -101,19 +101,27 @@
                 </form>
             </div>
             <div class="user-area">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z"
-                    />
-                </svg>
-                <p>avatar</p>
-                <p>Lelels comet</p>
+                <button class="notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z"
+                        />
+                    </svg>
+                </button>
+                <button class="user-profile"></button>
+                <p>Morgan Oakley</p>
             </div>
-            <p>hi there fulano !</p>
-            <div class="placeholder">
-                <button class="new">+ New</button>
-                <button class="upgrade">Upgrade</button>
-                <button class="help">?</button>
+            <div class="welcome">
+                <div class="user-pfp"></div>
+                <div class="user-container">
+                    <p>Hi there,</p>
+                    <h4 class="username">Morgan Oakley (@morgan)</h4>
+                </div>
+            </div>
+            <div class="user-buttons">
+                <button class="new">New</button>
+                <button class="upload">Upload</button>
+                <button class="share-user">Share</button>
             </div>
         </div>
         <div class="main-content">
@@ -122,69 +130,123 @@
             <div class="project-cards">
                 <div class="project">
                     <h3>Super Cool Project</h3>
-                    <p>Due date: 2024-12-31</p>
-                    <button
-                        class="favorite"
-                        aria-label="Add to favorites"
-                    ></button>
-                    <button class="seen" aria-label="Mark as seen"></button>
-                    <button class="share" aria-label="Share project"></button>
+                    <p>
+                        Sed tempus ut lacus ut scelerisque. Suspendisse
+                        sollicitudin nibh et, id facilisis felis accumsan nec.
+                    </p>
+                    <div class="button-container">
+                        <button
+                            class="favorite"
+                            aria-label="Add to favorites"
+                        ></button>
+                        <button class="seen" aria-label="Mark as seen"></button>
+                        <button
+                            class="share"
+                            aria-label="Share project"
+                        ></button>
+                    </div>
                 </div>
                 <div class="project">
-                    <h3>Super Cool Project</h3>
-                    <p>Due date: 2024-12-31</p>
-                    <button
-                        class="favorite"
-                        aria-label="Add to favorites"
-                    ></button>
-                    <button class="seen" aria-label="Mark as seen"></button>
-                    <button class="share" aria-label="Share project"></button>
+                    <h3>Less Cool Project</h3>
+                    <p>
+                        Nullam condimentum ipsum ut lectus vehicula consectetur.
+                        Quisque sed dolor tincidunt, consectetur sapien et,
+                        facilisis dolor. Duis sem purus, dignissim ut sapien in,
+                        varius pellentesque lacus.
+                    </p>
+                    <div class="button-container">
+                        <button
+                            class="favorite"
+                            aria-label="Add to favorites"
+                        ></button>
+                        <button class="seen" aria-label="Mark as seen"></button>
+                        <button
+                            class="share"
+                            aria-label="Share project"
+                        ></button>
+                    </div>
                 </div>
                 <div class="project">
-                    <h3>Super Cool Project</h3>
-                    <p>Due date: 2024-12-31</p>
-                    <button
-                        class="favorite"
-                        aria-label="Add to favorites"
-                    ></button>
-                    <button class="seen" aria-label="Mark as seen"></button>
-                    <button class="share" aria-label="Share project"></button>
+                    <h3>Impossible App</h3>
+                    <p>
+                        In hac habitasse platea dictumst. Vivamus dictum rutrum
+                        arcu, a placerat velit sagittis id.
+                    </p>
+                    <div class="button-container">
+                        <button
+                            class="favorite"
+                            aria-label="Add to favorites"
+                        ></button>
+                        <button class="seen" aria-label="Mark as seen"></button>
+                        <button
+                            class="share"
+                            aria-label="Share project"
+                        ></button>
+                    </div>
                 </div>
                 <div class="project">
-                    <h3>Super Cool Project</h3>
-                    <p>Due date: 2024-12-31</p>
-                    <button
-                        class="favorite"
-                        aria-label="Add to favorites"
-                    ></button>
-                    <button class="seen" aria-label="Mark as seen"></button>
-                    <button class="share" aria-label="Share project"></button>
+                    <h3>Easy Peasy App</h3>
+                    <p>
+                        Etiam cursus eros ac efficitur fringilla. Vestibulum
+                        dignissim urna eget accumsan aliquam. Curabitur
+                        dignissim nisi in tortor commodo, ac bibendum magna
+                        tincidunt.
+                    </p>
+                    <div class="button-container">
+                        <button
+                            class="favorite"
+                            aria-label="Add to favorites"
+                        ></button>
+                        <button class="seen" aria-label="Mark as seen"></button>
+                        <button
+                            class="share"
+                            aria-label="Share project"
+                        ></button>
+                    </div>
                 </div>
                 <div class="project">
-                    <h3>Super Cool Project</h3>
-                    <p>Due date: 2024-12-31</p>
-                    <button
-                        class="favorite"
-                        aria-label="Add to favorites"
-                    ></button>
-                    <button class="seen" aria-label="Mark as seen"></button>
-                    <button class="share" aria-label="Share project"></button>
+                    <h3>Ad Blocker</h3>
+                    <p>
+                        Quisque eget rutrum nisl. Nam augue justo, cursus vitae
+                        metus vel, pharetra hendrerit felis. Aliquam sed
+                        malesuada eros.
+                    </p>
+                    <div class="button-container">
+                        <button
+                            class="favorite"
+                            aria-label="Add to favorites"
+                        ></button>
+                        <button class="seen" aria-label="Mark as seen"></button>
+                        <button
+                            class="share"
+                            aria-label="Share project"
+                        ></button>
+                    </div>
                 </div>
                 <div class="project">
-                    <h3>Super Cool Project</h3>
-                    <p>Due date: 2024-12-31</p>
-                    <button
-                        class="favorite"
-                        aria-label="Add to favorites"
-                    ></button>
-                    <button class="seen" aria-label="Mark as seen"></button>
-                    <button class="share" aria-label="Share project"></button>
+                    <h3>Money Maker</h3>
+                    <p>
+                        Praesent convallis, libero quis congue elementum, nunc
+                        ante faucibus sapien, ac scelerisque tortor purus sit
+                        amet ex. Pellentesque mollis nec sem vel aliquam.
+                    </p>
+                    <div class="button-container">
+                        <button
+                            class="favorite"
+                            aria-label="Add to favorites"
+                        ></button>
+                        <button class="seen" aria-label="Mark as seen"></button>
+                        <button
+                            class="share"
+                            aria-label="Share project"
+                        ></button>
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <div class="announcement-cards">
                     <div class="announcement">
-                        <h4>Site Maintenance</h4>
+                        <h5>Site Maintenance</h5>
                         <p>
                             Vestibulum condimentum tellus lacus, in accumsan
                             elit maximus ac. Donec hendrerit sodales congue...
@@ -192,7 +254,7 @@
                     </div>
                     <hr />
                     <div class="announcement">
-                        <h4>Community Share Day</h4>
+                        <h5>Community Share Day</h5>
                         <p>
                             Nam vel lectus tincidunt, rutrum nulla eu, ornare
                             libero. Aliquam dictum accumsan porttitor...
@@ -200,7 +262,7 @@
                     </div>
                     <hr />
                     <div class="announcement">
-                        <h4>Updated Privacy Policy</h4>
+                        <h5>Updated Privacy Policy</h5>
                         <p>
                             Phasellus efficitur nisi eget elit consectetur, eget
                             condimentum ante auctor. Cras fringilla sagittis sem
@@ -210,21 +272,25 @@
                 </div>
                 <h2>Trending</h2>
                 <div class="trending-cards">
-                    <div class="trending-topic">
-                        <h5>@lelelscomet</h5>
-                        <p>Check out this awesome project!</p>
+                    <div class="trending">
+                        <div class="pfp"></div>
+                        <h5>@tegan</h5>
+                        <p>World Peace Builder</p>
                     </div>
-                    <div class="trending-topic">
-                        <h5>@lelelscomet</h5>
-                        <p>Check out this awesome project!</p>
+                    <div class="trending">
+                        <div class="pfp"></div>
+                        <h5>@morgan</h5>
+                        <p>Super Cool Project</p>
                     </div>
-                    <div class="trending-topic">
-                        <h5>@lelelscomet</h5>
-                        <p>Check out this awesome project!</p>
+                    <div class="trending">
+                        <div class="pfp"></div>
+                        <h5>@kendall</h5>
+                        <p>Life Changing App</p>
                     </div>
-                    <div class="trending-topic">
-                        <h5>@lelelscomet</h5>
-                        <p>Check out this awesome project!</p>
+                    <div class="trending">
+                        <div class="pfp"></div>
+                        <h5>@alex</h5>
+                        <p>No Traffic Maker</p>
                     </div>
                 </div>
             </div>

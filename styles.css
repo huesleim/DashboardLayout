@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
+:root {
+    --user-pfp: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z'/%3E%3C/svg%3E")
+        no-repeat center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +11,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 1fr;
     height: 100vh;
     font-family: "Roboto", Verdana, sans-serif;
 }
@@ -30,6 +33,23 @@ hr {
     border-top: 1px solid #afafaf; /* any color */
     width: 90%;
     margin: 5px auto;
+}
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 14px;
+    font-weight: bold;
+    align-self: start;
+}
+p {
+    color: grey;
 }
 /* sidebar grid */
 .sidebar {
@@ -65,6 +85,11 @@ hr {
     padding: 10px;
     gap: 20px;
 }
+.sidebar button:hover {
+    cursor: pointer;
+    background-color: #147bb8;
+    transition: background-color 0.3s;
+}
 .sidebar svg {
     max-height: 25px;
     width: auto;
@@ -76,15 +101,116 @@ hr {
 .navbar {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: skyblue;
+    grid-template-rows: 2fr 3fr;
+    background-color: white;
+    width: 100%;
+    max-height: 140px;
 }
 .navbar svg {
     max-height: 25px;
-    width: auto;
+    width: 25px;
     fill: black;
 }
-
+.navbar p{
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    align-self: end;
+}
+.search {
+    display: grid;
+    grid-area: 1 / 1 / 2 / 2;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 20px 20px 5px 20px;
+}
+.search input {
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #e2e8f0;
+    width: 100%;
+}
+.welcome {
+    display: grid;
+    grid-template-rows: minmax(auto 1fr) minmax(auto 3fr);
+    grid-template-columns: 1fr 6fr;
+    padding-bottom: 5px;
+    box-sizing:border-box;
+}
+.user-pfp {
+    background: var(--user-pfp);
+    grid-area: 1 / 1 / -1 / 2;
+    margin: 0px;
+    justify-self: center;
+    align-self: center;
+    width: 65px;
+    height: 65px;
+}
+.user-container {
+    display:grid;
+    grid-template-rows: auto auto;
+    gap: 0px;
+}
+.notifications {
+    background-color: transparent;
+    border: none;
+}
+.notifications:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+button.user-profile {
+    background: var(--user-pfp);
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+button.user-profile:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+.user-area{
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 20px;
+    justify-self: end;
+    padding: 20px 70px 0px 0px;
+}
+.user-area p {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    align-self: center;
+}
+.user-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-self: center;
+    align-items: center;
+    padding: 25px 70px 25px 0px;
+    width: 100%;
+    height: 100%;
+}
+.user-buttons button {
+    height:100%;
+    border: none;
+    background-color:#1992d4;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: Roboto, Verdana, sans-serif;
+}
+.user-buttons button:hover {
+    cursor: pointer;
+    background-color:#147bb8;
+    transition: background-color 0.3s;
+}
 /* main content grid */
 .main-content {
     display: grid;
@@ -92,7 +218,9 @@ hr {
     grid-template-rows: auto 1fr 1fr;
     grid-area: 2 / 2 / -1 / -1;
     background-color: #e2e8f0;
-    padding: 5px 10px 20px 5px;
+    padding: 0px 10px 5px 5px;
+    overflow-y:auto;
+box-shadow: inset 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 }
 .projects-header {
     margin-left: 20px;
@@ -108,6 +236,9 @@ hr {
     padding: 10px 20px 20px 20px;
     gap: 20px;
 }
+.project-cards p {
+    font-size: 12px;
+}
 .project {
     position: relative;
     background-color: white;
@@ -116,6 +247,40 @@ hr {
     padding: 10px;
     padding-left: 16px;
 }
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 15px;
+}
+.project button {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+.project button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+button.favorite {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z'/%3E%3C/svg%3E")
+        no-repeat center;
+    background-size: contain;
+}
+button.seen {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z'/%3E%3C/svg%3E")
+        no-repeat center;
+    background-size: contain;
+}
+button.share {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z'/%3E%3C/svg%3E")
+        no-repeat center;
+    background-size: contain;
+}
+
 .project::before {
     content: "";
     position: absolute;
@@ -130,7 +295,7 @@ hr {
 .container {
     grid-area: 2 / 3 / -1 / -1;
     display: grid;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto auto auto;
 }
 .announcement-cards {
     background-color: white;
@@ -143,4 +308,37 @@ hr {
 }
 .announcement {
     padding: 2px;
+}
+.announcement p {
+    font-size: 12px;
+}
+.trending-cards {
+    background-color: white;
+    margin: 10px 20px 20px 0px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container h2 {
+    margin-top: -5px;
+}
+.trending {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+    column-gap: 10px;
+}
+.trending .pfp {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z'/%3E%3C/svg%3E")
+        no-repeat center;
+    background-size: contain;
+    height: 35px;
+    width: 35px;
+    grid-area: 1 / 1 / -1 / 2;
+}
+.trending p {
+    font-size: 10px;
 }
